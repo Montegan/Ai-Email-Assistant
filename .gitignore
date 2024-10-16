@@ -1,0 +1,32 @@
+# React specific
+node_modules/
+.pnp
+.pnp.js
+/build
+/coverage
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python specific
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+*.pyd
+*.pdb
+venv/
+
+# Flask specific
+.env
+instance/
+*.log
+*.sqlite3
+
+# IDE specific
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
