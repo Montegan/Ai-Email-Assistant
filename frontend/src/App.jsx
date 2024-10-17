@@ -11,25 +11,23 @@ function App() {
   const [email, setEmail] = useState("");
 
   const generateComment = async () => {
-    const response = await axios.get("http://127.0.0.1:5000/originalComment");
+    const response = await axios.get(" http://127.0.0.1:5000/originalComment");
     setOriginalComment(response.data.messages);
   };
 
   const generateEmail = async () => {
-    const response = await axios.post("http://127.0.0.1:5000/composeEmail", {
+    const response = await axios.post(" http://127.0.0.1:5000/composeEmail", {
       language: language,
       comment: originalComment,
     });
     setEmail(response.data.email);
-    setCommentSummary(response.data.summary);
-    setSentiment(response.data.sentiment);
   };
 
   return (
     <div className="text-white flex flex-col items-center gap-10 p-14">
       <h1 className="font-title text-[3.5rem]">AI Email Assistant</h1>
 
-      <div className="grid grid-cols-2   w-[90vw] max-w-[90vw] h-fit min-h-[100vh] gap-x-4">
+      <div className="grid max-sm:grid-cols-1 grid-cols-2 w-[90vw] max-w-[90vw] h-fit min-h-[100vh] gap-x-4">
         <div className="h-fit min-h-[86vh]  w-full flex items-center flex-col gap-5">
           <div className=" h-fit min-h-[86vh] w-full flex flex-col gap-3  ">
             <label
@@ -112,27 +110,6 @@ function App() {
             Generate Email
           </button>
         </div>
-
-        {/* <div className="  w-full flex flex-col gap-10">
-          {/* <div className="h-[75%] max-h-[75%]">
-            <label
-              htmlFor="content_summary"
-              className="font-title font-bold text-left text-[1.5rem]"
-            >
-              Comment Summary
-            </label>
-            <textarea
-              name="content_summary"
-              id="content_summary"
-              className=" h-full max-h-full  w-full p-2 focus:outline-none rounded-xl bg-[#191A23]"
-              value={commentSummary}
-              onChange={(e) => {
-                setCommentSummary(e.target.value);
-                console.log(e.target.value);
-              }}
-            ></textarea>
-          </div> 
-        </div> */}
       </div>
     </div>
   );
