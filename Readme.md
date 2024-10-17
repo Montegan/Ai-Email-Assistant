@@ -1,6 +1,12 @@
-# AI Email Assistant Chatbot
+# AI Email Assistant Chatbot:
+
+![APP Demo](image.png)
 
 This is an AI-powered email assistant designed to help an electronics shop generate email responses to customer comments. The app takes user comments, analyzes them for sentiment, generates summaries, and composes personalized emails based on the comment and sentiment.
+
+# Click Below to learn more about the project:
+
+https://docs.google.com/presentation/d/1mXidtDu6DuE7fcsfZWA-mRobkDiXGwGIK9o_2zqX594/edit?usp=sharing
 
 ## Features
 
